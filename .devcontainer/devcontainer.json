@@ -1,0 +1,57 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/javascript-node
+{
+  "name": "Vue 3 env",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+  "features": {
+    "ghcr.io/dhoeric/features/google-cloud-cli:1": {}
+  },
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": ["bash -i -c 'sudo apt update && sudo apt install default-jdk'"],
+  //["git config --global user.email 'decisionnerd@users.noreply.github.com'", "git config --global user.name 'decisionnerd'"],
+
+  // Configure tool-specific properties.
+  "customizations": {
+    // VS Code
+    "vscode": {
+      "extensions": [
+        // Vue Volar
+        "Vue.volar",
+        // eslint
+        "dbaeumer.vscode-eslint",
+        // prettier
+        "esbenp.prettier-vscode",
+        // tailwindcss intellisense
+        "bradlc.vscode-tailwindcss",
+        // tailwindcss shades
+        "viget.vscode-tailwindcss-shades",
+        // npm intellisense
+        "christian-kohler.npm-intellisense",
+        // path intellisense
+        "christian-kohler.path-intellisense",
+        // firebase
+        "toba.vsfire",
+        // vscode-icons
+        "vscode-icons-team.vscode-icons",
+        // GitHub Copilot
+        "GitHub.copilot",
+        // GitHub Copilot Labs
+        "GitHub.copilot-labs",
+        // Inline Parameter for VSCode
+        "liamhammett.inline-parameters",
+        // Todo Tree
+        "Gruntfuggly.todo-tree",
+        // Synthwave '84
+        "RobbOwen.synthwave-vscode"
+      ]
+    }
+  }
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}
