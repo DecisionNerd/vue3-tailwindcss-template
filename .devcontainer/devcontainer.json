@@ -43,6 +43,8 @@
         "GitHub.copilot",
         // GitHub Copilot Labs
         "GitHub.copilot-labs",
+        // MSTF Live Share
+        "ms-vsliveshare.vsliveshare",
         // Inline Parameter for VSCode
         "liamhammett.inline-parameters",
         // Todo Tree
